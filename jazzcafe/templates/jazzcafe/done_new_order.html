@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block title %}オーダー完了{% endblock %}
+
+{% block main %}
+<div class="container">
+    <h2>オーダー完了しました</h2>
+    <div>
+      <p>ご注文ありがとうございます！</p>
+      <p>現在準備中です！</p>
+      <p>少々お待ちください！</p>
+    </div>
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">受付時間</th>
+            <td>{{order.register_datetime}}</td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+            <th scope="row">テーブル番号</th>
+            <td>{{order.table_number}}</td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+            <th scope="row">飲み物</th>
+            <td>
+              {% if order.drink is None %}
+              ×
+              {% else %}
+              {{order.drink}}
+              {% endif %}
+            </td>
+          </tr>
+        </tbody>
+        <tbody>
+            <tr>
+              <th scope="row">砂糖</th>
+              <td>
+                {% if order.is_suger == True %}
+                ○
+                {% else %}
+                ×
+                {% endif %}
+              </td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th scope="row">ミルク</th>
+              <td>
+                {% if order.is_milk == True %}
+                ○
+                {% else %}
+                ×
+                {% endif %}
+              </td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th scope="row">スイーツ</th>
+              <td>
+                {% if order.treat is None %}
+                ×
+                {% else %}
+                {{order.treat}}
+                {% endif %}
+              </td>
+            </tr>
+          </tbody>
+      </table>
+</div>
+{% endblock %}
+

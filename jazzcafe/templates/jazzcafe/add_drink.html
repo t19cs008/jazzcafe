@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}ドリンク追加{% endblock %}
+
+{% block main %}
+<div class="container">
+    <h2>ドリンク追加</h2>
+    <form action = "" method = "POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form.as_p}}
+        <div class="text-center"><button type = "submit" class="btn btn-primary btn-lg w-100">追加</button></div>
+    </form>
+</div>
+{% endblock %}
+

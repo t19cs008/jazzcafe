@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}オーダー表{% endblock %}
+
+{% block main %}
+<div class="container">
+    <h2>オーダーリスト</h2>
+    <button type="button" class="btn btn-outline-primary btn-lg w-100" onclick="location.href='{% url 'jazzcafe:output_order_list' %}'">CSV出力</button>
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">受付時間</th>
+            <th scope="col">テーブル番号</th>
+            <th scope="col">飲み物</th>
+            <th scope="col">砂糖</th>
+            <th scope="col">ミルク</th>
+            <th scope="col">スイーツ</th>
+          </tr>
+        </thead>
+        {% for order in orders %}
+        <tbody>
+          <tr>
+            <td>{{order.register_datetime}}</td>
+            <td>{{order.table_number}}</td>
+            <td>
+              {% if order.drink is None %}
+              ×
+              {% else %}
+              {{order.drink}}
+              {% endif %}
+            </td>
+            <td>
+              {% if order.is_suger == True %}
+              ○
+              {% else %}
+              ×
+              {% endif %}
+            </td>
+            <td>
+              {% if order.is_milk == True %}
+              ○
+              {% else %}
+              ×
+              {% endif %}
+            </td>
+            <td>
+              {% if order.treat is None %}
+              ×
+              {% else %}
+              {{order.treat}}
+              {% endif %}
+            </td>
+          </tr>
+        </tbody>
+        {% endfor %}
+      </table>
+</div>
+{% endblock %}
+

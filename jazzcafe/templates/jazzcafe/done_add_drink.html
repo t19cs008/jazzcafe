@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}ドリンク追加しました{% endblock %}
+
+{% block main %}
+<div class="container">
+    <h2>ドリンク追加しました</h2>
+    
+    <p><button type="button" class="btn btn-secondary" onclick="location.href = '{% url 'jazzcafe:add_drink' %}'">さらにドリンクを追加する</button></p>
+	<!-- <p><button type="button" class="btn btn-primary" onclick="location.href = ''">リストに戻る</button></p> -->
+</div>
+{% endblock %}
+

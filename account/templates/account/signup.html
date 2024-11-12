@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}ユーザ登録{% endblock %}
+
+{% block main %}
+	<div class="container">
+	{% if not user.is_authenticated %}
+		こんにちは！ ゲスト さん
+	{% else %}
+		こんにちは！ {{ user.username }} さん
+	{% endif %}
+
+	{% if form.non_field_errors %}
+	{% for error in form.non_field_errors %}
+	<p class="errornote">
+		{{ error }}
+	</p>
+	{% endfor %}
+	{% endif %}
+
+	{{ error_message }}
+
+	<!-- <form action = "{% url 'account:login' %}" method = "POST"> -->
+	<form action = "" method = "POST">
+	{% csrf_token %}
+	{{form.as_p}}
+	<input type="hidden" name="next" value="{{ next }}">
+	<div class="text-center"><button type = "submit" >ユーザ登録</button></div>
+	</form>	
+</div>
+{% endblock %}

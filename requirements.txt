@@ -1,0 +1,16 @@
+asgiref
+Brotli
+channels
+click
+dj-database-url
+Django
+gunicorn
+h11
+packaging
+pip
+psycopg2-binary
+pytz
+sqlparse
+typing_extensions
+uvicorn
+whitenoise

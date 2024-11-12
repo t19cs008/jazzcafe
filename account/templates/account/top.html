@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+<!-- コンテンツ -->
+{% block main %}
+<div class="container">
+  <h1>トップページ</h1>
+  <p>ようこそ！{{ user.username }}さん</p>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">サービス名</th>
+        <th scope="col">URL</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">JazzCafe</th>
+        <td><a href="{% url 'jazzcafe:staff_main_page' %}">{{request.scheme}}://{{request.get_host}}{% url 'jazzcafe:staff_main_page' %}</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+{% endblock %}

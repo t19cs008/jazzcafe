@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+<!-- コンテンツ -->
+{% block main %}
+<div class="container">
+  <h1>ユーザ登録できました</h1>
+  <h2>ログイン画面に行きます</h2>
+  <meta http-equiv="refresh" content="3;url={% url 'account:login' %}"> 
+</div>
+{% endblock %}
