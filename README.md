@@ -89,6 +89,12 @@ jazzcafeのサイトにアクセスします．
 
 色々触ってみてください．
 
+## 15分アクティブじゃないとスリープする問題の解決
+
+[UptimeRobot](https://uptimerobot.com/)によってhttps通信を定期的に行うことで，注文サイトのスリープの防止が可能です．
+
+監視対象のURLは注文サイトのトップページに，monitoring intervalは13分程度に設定すれば良いと思います．
+
 ## 開発環境で実行する方法
 
 想定環境 : 「ubuntu 20.04以上」 もしくは 「raspberry pi os」
