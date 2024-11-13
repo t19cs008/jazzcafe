@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     'account.apps.AccountConfig',
     'jazzcafe.apps.JazzcafeConfig',
+    'axes',
 ]
 
 MIDDLEWARE = [
@@ -58,6 +59,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    'axes.middleware.AxesMiddleware',
 ]
 
 ROOT_URLCONF = "main.urls"
@@ -120,6 +122,14 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTHENTICATION_BACKENDS = [
+    # AxesStandaloneBackend should be the first backend in the AUTHENTICATION_BACKENDS list.
+    'axes.backends.AxesStandaloneBackend',
+
+    # Django ModelBackend is the default authentication backend.
+    'django.contrib.auth.backends.ModelBackend',
+]
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
@@ -152,3 +162,9 @@ LOGIN_REDIRECT_URL = 'account:top'
 AUTH_USER_MODEL = 'account.Staff'
 
 MEDIA_ROOT = '/media'
+
+AXES_FAILURE_LIMIT = 6
+AXES_COOLOFF_TIME = 1
+AXES_RESET_ON_SUCCESS = True
+AXES_DISABLE_ACCESS_LOG = False
+AXES_RESET_COOL_OFF_ON_FAILURE_DURING_LOCKOUT = False
