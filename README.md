@@ -69,7 +69,7 @@ jazzcafeのサイトにアクセスします．
 
 トップページのURLの後ろに「/jazzcafe/new_order/1」を付け加えてください．
 
-例えば，トップページのURLが「https://jazzcafe.onrender.com」のとき，「https://jazzcafe.onrender.com/jazzcafe/new_order/1」となります．
+例えば，トップページのURLが「(https://jazzcafe.onrender.com)[https://jazzcafe.onrender.com]」のとき，「(https://jazzcafe.onrender.com/jazzcafe/new_order/1)[https://jazzcafe.onrender.com/jazzcafe/new_order/1]」となります．
 
 これは，テーブル番号1の注文受付画面になります．
 
@@ -83,7 +83,7 @@ jazzcafeのサイトにアクセスします．
 
 トップページのURLの後ろに「/jazzcafe/staff_main_page/」を付け加えてください．
 
-例えば，トップページのURLが「https://jazzcafe.onrender.com」のとき，「https://jazzcafe.onrender.com/jazzcafe/staff_main_page/」となります．
+例えば，トップページのURLが「(https://jazzcafe.onrender.com)[https://jazzcafe.onrender.com]」のとき，「(https://jazzcafe.onrender.com/jazzcafe/staff_main_page/)[https://jazzcafe.onrender.com/jazzcafe/staff_main_page/]」となります．
 
 ここで，未完了オーダーリストや在庫確認を行うことができます．
 
