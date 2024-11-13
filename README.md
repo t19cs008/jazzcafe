@@ -95,6 +95,8 @@ jazzcafeのサイトにアクセスします．
 
 監視対象のURLは注文サイトのトップページに，monitoring intervalは13分程度に設定すれば良いと思います．
 
+**サイトを閉鎖するときは，UptimeRoborの設定も解除すること！！！！**
+
 ## 開発環境で実行する方法
 
 想定環境 : 「ubuntu 20.04以上」 もしくは 「raspberry pi os」
